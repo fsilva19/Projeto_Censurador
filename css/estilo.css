@@ -3,6 +3,7 @@ html{
 }
 body{
     background-color: rgb(255, 226, 226);
+    margin-bottom: 20px;
 }
 .estrutura{
     display: grid;
@@ -54,6 +55,19 @@ body{
 }
 .btn-primary{
     width: 200px;
+    
+}
+.btn{
+    background-color: rgb(64, 126, 167);
+    border-color: rgb(64, 126, 167);
+}
+.btn:hover{
+    background-color:rgb(27, 84, 122);
+    border-color: rgb(27, 84, 122);
+}
+.btn:focus{
+    background-color:rgb(27, 84, 122);
+    border-color: rgb(27, 84, 122);
 }
 .botao{
     display: flex;

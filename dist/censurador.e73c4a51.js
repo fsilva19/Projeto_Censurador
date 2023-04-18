@@ -261,23 +261,25 @@ filter.addWords('caralho', 'porra', 'buceta', 'putaria', 'pornografia', 'porno',
 formulario.addEventListener('submit', function (e) {
   e.preventDefault();
   var mudar = formulario.querySelector('#texto').value;
-  if (filter.isProfane(mudar)) {
-    censurado.innerHTML = 'ATENÇÃO!</br>O texto contém palavras obscenas!';
-    mostrador.innerText = filter.clean(mudar);
-    mostrar_esconder.style.display = 'block';
-    recarregar.style.display = 'block';
-    sem_censurado.style.display = 'none';
-    accordion.style.display = 'block';
-  } else {
-    sem_censurado.innerHTML = 'O texto não contém palavras obscenas!';
-    sem_censurado.style.display = 'block';
-    mostrar_esconder.style.display = 'block';
-    recarregar.style.display = 'block';
-    censurado.style.display = 'none';
+  if (!(mudar === '')) {
+    if (filter.isProfane(mudar)) {
+      censurado.innerHTML = 'ATENÇÃO!</br>O texto contém palavras obscenas!';
+      mostrador.innerText = filter.clean(mudar);
+      mostrar_esconder.style.display = 'block';
+      recarregar.style.display = 'block';
+      sem_censurado.style.display = 'none';
+      accordion.style.display = 'block';
+    } else {
+      sem_censurado.innerHTML = 'O texto não contém palavras obscenas!';
+      sem_censurado.style.display = 'block';
+      mostrar_esconder.style.display = 'block';
+      recarregar.style.display = 'block';
+      censurado.style.display = 'none';
+    }
+    recarregar.addEventListener('click', function () {
+      window.location.href = '/';
+    });
   }
-  recarregar.addEventListener('click', function () {
-    window.location.href = '/';
-  });
 });
 },{"bad-words":"node_modules/bad-words/lib/badwords.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
