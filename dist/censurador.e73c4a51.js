@@ -266,6 +266,8 @@ formulario.addEventListener('submit', function (e) {
     mostrador.innerText = filter.clean(mudar);
     mostrar_esconder.style.display = 'block';
     recarregar.style.display = 'block';
+    sem_censurado.style.display = 'none';
+    accordion.style.display = 'block';
   } else {
     sem_censurado.innerHTML = 'O texto não contém palavras obscenas!';
     sem_censurado.style.display = 'block';
@@ -302,7 +304,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50520" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50041" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

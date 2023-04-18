@@ -19,6 +19,8 @@ formulario.addEventListener('submit', function(e){
         mostrador.innerText = filter.clean(mudar);
         mostrar_esconder.style.display = 'block';
         recarregar.style.display = 'block';
+        sem_censurado.style.display = 'none';
+        accordion.style.display = 'block';
     }else{
         sem_censurado.innerHTML = 'O texto não contém palavras obscenas!';
         sem_censurado.style.display = 'block';
